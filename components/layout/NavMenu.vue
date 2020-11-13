@@ -44,7 +44,7 @@ export default {
 
 <style lang="scss">
 .nav__menu {
-  overflow-y: scroll;
+  overflow-y: auto;
   padding-top: 6em;
   font-size: 1rem;
   z-index: -1;
@@ -63,8 +63,7 @@ export default {
   padding-bottom: 6em; // This is a friendly fix for touch devices/mobile browsers not being able to see the full text at the bottom of the nav if the menu was larger than the viewport.
 
   @include for-tablet-landscape-up {
-    font-size: 2rem;
-    // padding-top: 10rem;
+    font-size: 2rem; // Double the font size, everything is set up with 'em' values to scale accordingly.
   }
 
   @include for-desktop-up {
@@ -101,21 +100,6 @@ export default {
           transition: 200ms linear;
           transition-property: color;
 
-          &.nuxt-link-active:before {
-            content: '';
-            display: inline-block;
-            background-color: $white;
-            width: 0.28em;
-            height: 0.36em;
-            margin-right: 0.2em;
-            margin-bottom: 0.125em;
-            mask: url('~assets/icons/triangle.svg');
-            mask-size: cover;
-            -webkit-mask: url('~assets/icons/triangle.svg');
-            -webkit-mask-size: cover;
-            transition: 200ms linear background-color;
-          }
-
           &:hover {
             color: $grey;
 
@@ -126,6 +110,20 @@ export default {
         }
       }
     }
+  }
+  .nuxt-link-active:before {
+    content: '';
+    display: inline-block;
+    background-color: $white;
+    width: 0.28em;
+    height: 0.36em;
+    margin-right: 0.2em;
+    margin-bottom: 0.125em;
+    mask: url('~assets/icons/triangle.svg');
+    mask-size: cover;
+    -webkit-mask: url('~assets/icons/triangle.svg');
+    -webkit-mask-size: cover;
+    transition: 200ms linear background-color;
   }
 }
 
