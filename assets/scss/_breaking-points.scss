@@ -1,0 +1,47 @@
+/*
+  Considering we will keep a mobile first approach, the bp's are from 600px onwards.
+  Support for screens up to 320px -> very large.
+
+  Usage:
+
+  .class {
+    padding: 10px;
+
+    @include for-tablet-portrait-up {
+      padding: 20px;
+    }
+  }
+*/
+
+@mixin for-phone-only {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+@mixin for-tablet-portrait-up {
+  // 600px
+  @media (min-width: 37.5rem) {
+    @content;
+  }
+}
+@mixin for-tablet-landscape-up {
+  // 900px
+  @media (min-width: 56.25rem) {
+    @content;
+  }
+}
+@mixin for-desktop-up {
+  // 1280px
+  @media (min-width: 80rem) {
+    @content;
+  }
+}
+@mixin for-big-desktop-up {
+  // 1800px
+  @media (min-width: 112.5rem) {
+    @content;
+  }
+}
+
+// Source:
+// https://www.freecodecamp.org/news/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862/
