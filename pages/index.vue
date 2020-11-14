@@ -1,9 +1,20 @@
 <template>
-  <main></main>
+  <main>
+    <PageHeader :img-src="imgSrc" />
+  </main>
 </template>
 
 <script>
-export default {}
+import PageHeader from '@/components/PageHeader'
+
+export default {
+  components: { PageHeader },
+  data() {
+    return {
+      imgSrc: '/img/Header-img.jpg',
+    }
+  },
+}
 </script>
 
 <style></style>
