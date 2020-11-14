@@ -17,15 +17,19 @@ export default {
   name: 'PageHeader',
   components: { Button },
   props: {
-    imgSrc: String,
+    imgSrc: {
+      type: String,
+      default: '/img/default-header.jpg',
+    },
   },
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .page-header {
   background-size: cover;
   background-position: center;
+  margin-bottom: 110px;
 }
 
 .page-header__button {
@@ -37,11 +41,16 @@ export default {
   font-weight: 400;
   font-size: 170px;
   line-height: 1em;
+  height: unset;
   text-transform: uppercase;
   padding: 130px 0 70px;
 }
 
 @include for-tablet-landscape-up {
+  .page-header {
+    margin-bottom: 4rem;
+  }
+
   .page-header__title {
     font-size: 400px;
     padding: 10rem 0 4.25rem;
