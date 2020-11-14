@@ -42,6 +42,9 @@ export default {
     // Set the element position here, so that the scroll event doesn't need to check everytime.
     this.elementPosition =
       this.$refs.article.getBoundingClientRect().top + scrollY
+
+    // Call method if some elements are already in view.
+    this.isElementInView()
   },
 
   methods: {
