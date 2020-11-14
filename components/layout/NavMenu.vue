@@ -67,8 +67,8 @@ export default {
   }
 
   @include for-desktop-up {
-    margin: 20px;
-    height: calc(100vh - 40px);
+    border: 20px solid $white;
+    height: 100vh;
   }
 
   nav {
@@ -103,7 +103,7 @@ export default {
           &:hover {
             color: $grey;
 
-            &.nuxt-link-active:before {
+            &.nuxt-link-exact-active:before {
               background-color: $grey;
             }
           }
@@ -111,7 +111,7 @@ export default {
       }
     }
   }
-  .nuxt-link-active:before {
+  .nuxt-link-exact-active:before {
     content: '';
     display: inline-block;
     background-color: $white;

@@ -34,6 +34,13 @@ export default {
     }
   },
 
+  watch: {
+    $route() {
+      // Watch for route changes, meaning that we clicked a link. The menu should be inactive when that happens.
+      this.isActive = false
+    },
+  },
+
   mounted() {
     window.addEventListener('scroll', this.updateScroll)
   },
@@ -83,8 +90,12 @@ export default {
   transition-property: border-bottom, padding;
 
   @include for-tablet-landscape-up {
-    padding: 3rem 0 1.125rem;
+    padding: 2rem 0 1.125rem;
     border-bottom: 1px solid $black;
+  }
+
+  @include for-desktop-up {
+    padding-top: 3rem;
   }
 }
 
