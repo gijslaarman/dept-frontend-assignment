@@ -1,35 +1,34 @@
 <template>
-  <header
-    class="nav"
-    :class="{ active: isActive, 'stick-to-top': scrollPosition > 50 }"
-  >
+  <header class="nav" :class="{ 'stick-to-top': scrollPosition > 50 }">
     <div class="container">
       <div class="nav__inner">
-        <NuxtLink to="/">
-          <DeptLogo title="Dept Logo" class="nav__logo"></DeptLogo>
+        <NuxtLink to="/" @click.native="closeMenu">
+          <DeptLogo title="Dept Logo" class="nav__logo" />
         </NuxtLink>
 
         <div class="nav__menu-button-wrapper">
-          <button class="nav__menu-button" @click="toggleMenu"></button>
+          <button class="nav__menu-button" @click="toggleMenu">
+            <div class="bars"></div>
+          </button>
         </div>
       </div>
     </div>
-
-    <NavMenu />
   </header>
 </template>
 
 <script>
-import NavMenu from './NavMenu'
 import DeptLogo from './DeptLogo'
 
 export default {
   name: 'Header',
-  components: { NavMenu, DeptLogo },
+  components: { DeptLogo },
+
+  props: {
+    isMenuActive: Boolean,
+  },
 
   data() {
     return {
-      isActive: false,
       scrollPosition: null,
     }
   },
@@ -37,7 +36,7 @@ export default {
   watch: {
     $route() {
       // Watch for route changes, meaning that we clicked a link. The menu should be inactive when that happens.
-      this.isActive = false
+      this.isMenuActive = false
     },
   },
 
@@ -47,8 +46,10 @@ export default {
 
   methods: {
     toggleMenu() {
-      this.isActive ? (this.isActive = false) : (this.isActive = true)
-      this.$emit('toggleScroll', this.isActive)
+      this.$emit('toggleMenu')
+    },
+    closeMenu() {
+      this.$emit('closeMenu')
     },
     updateScroll() {
       // https://stackoverflow.com/questions/59910718/change-background-color-of-navbar-when-scroll-event-with-vuejs
@@ -63,10 +64,11 @@ export default {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
+  width: 100%;
   background-color: transparent;
   transition: 200ms;
   transition-property: background-color;
+  z-index: 1000;
 }
 
 .nav__logo {
@@ -80,6 +82,7 @@ export default {
 }
 
 .nav__inner {
+  max-width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -106,6 +109,7 @@ export default {
 }
 
 .nav__menu-button {
+  display: block;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -117,26 +121,31 @@ export default {
   left: 50%;
   transform: translate(-50%, -50%);
 
-  // Create bars of the menu
-  &:before,
-  &:after {
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 2px;
-    right: 10px;
-    display: block;
-    background-color: $black;
-    transition: 300ms linear;
-    transition-property: transform, background-color;
-  }
+  .bars {
+    // Create bars of the menu
+    width: 100%;
+    height: 100%;
+    position: relative;
 
-  &:before {
-    top: 16px;
-  }
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 2px;
+      display: block;
+      background-color: $black;
+      transition: 300ms linear;
+      transition-property: transform, background-color;
+    }
 
-  &:after {
-    bottom: 16px;
+    &:before {
+      top: 0;
+    }
+
+    &:after {
+      bottom: 0;
+    }
   }
 }
 
@@ -157,8 +166,10 @@ export default {
   }
 }
 
-.active {
-  background-color: transparent;
+.menu-active {
+  .nav {
+    background-color: transparent;
+  }
 
   .nav__inner {
     border: none;
@@ -166,18 +177,20 @@ export default {
 
   .nav__menu-button {
     // Change the color of the menu bars.
-    &:before,
-    &:after {
-      background: $white;
-    }
+    div {
+      &:before,
+      &:after {
+        background: $white;
+      }
 
-    &:before {
-      top: 50%;
-      transform: translate(0, -50%) rotate(-45deg);
-    }
-    &:after {
-      top: 50%;
-      transform: translate(0, -50%) rotate(45deg);
+      &:before {
+        top: 50%;
+        transform: translate(0, -50%) rotate(-45deg);
+      }
+      &:after {
+        top: 50%;
+        transform: translate(0, -50%) rotate(45deg);
+      }
     }
   }
 

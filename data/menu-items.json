@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Home",
+    "link": "/"
+  },
+  {
+    "name": "Werk",
+    "link": "/werk"
+  },
+  {
+    "name": "Over",
+    "link": "/over"
+  },
+  {
+    "name": "Diensten",
+    "link": "/diensten"
+  },
+  {
+    "name": "Partners",
+    "link": "/partners"
+  },
+  {
+    "name": "Stories",
+    "link": "/stories"
+  },
+  {
+    "name": "Vacatures",
+    "link": "/vacatures"
+  },
+  {
+    "name": "Events",
+    "link": "/events"
+  },
+  {
+    "name": "Contact",
+    "link": "/contact"
+  }
+]

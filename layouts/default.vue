@@ -1,18 +1,47 @@
 <template>
   <div>
-    <Header @toggleScroll="toggleScroll"></Header>
+    <Header
+      @toggleMenu="toggleMenu"
+      @closeMenu="closeMenu"
+      :isMenuActive="isMenuActive"
+    />
+    <NavMenu @toggleMenu="toggleMenu" :isMenuActive="isMenuActive" />
     <Nuxt />
   </div>
 </template>
 
 <script>
 import Header from '@/components/layout/Header'
+import NavMenu from '@/components/layout/NavMenu'
 
 export default {
-  components: { Header },
+  components: { Header, NavMenu },
+  data() {
+    return {
+      isMenuActive: false,
+    }
+  },
+
+  watch: {
+    isMenuActive: {
+      // Watch if menu is active. e.g. if it's turned inactive by clicking a route remove the body-lock
+      handler() {
+        this.isMenuActive
+          ? document.body.classList.add('menu-active')
+          : document.body.classList.remove('menu-active')
+      },
+    },
+  },
+
   methods: {
-    toggleScroll() {
-      document.body.classList.toggle('lock-scroll')
+    toggleMenu() {
+      // Toggle menu
+      this.isMenuActive
+        ? (this.isMenuActive = false)
+        : (this.isMenuActive = true)
+    },
+    closeMenu() {
+      this.isMenuActive = false
     },
   },
 }
@@ -36,7 +65,7 @@ html {
   margin: 0;
 }
 
-body.lock-scroll {
+body.menu-active {
   overflow: hidden;
 }
 

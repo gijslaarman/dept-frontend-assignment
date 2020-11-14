@@ -24,7 +24,7 @@ svg {
   fill: $black;
 }
 
-.active {
+.menu-active {
   svg {
     fill: $white;
   }

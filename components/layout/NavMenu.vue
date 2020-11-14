@@ -1,44 +1,42 @@
 <template>
   <div class="nav__menu">
-    <div class="container">
-      <nav>
-        <ul>
-          <li>
-            <NuxtLink to="/">Home</NuxtLink>
-          </li>
-          <li>
-            <NuxtLink to="/x">Werk</NuxtLink>
-          </li>
-          <li>
-            <NuxtLink to="/x">Over</NuxtLink>
-          </li>
-          <li>
-            <NuxtLink to="/x">Diensten</NuxtLink>
-          </li>
-          <li>
-            <NuxtLink to="/x">Partners</NuxtLink>
-          </li>
-          <li>
-            <NuxtLink to="/x">Stories</NuxtLink>
-          </li>
-          <li>
-            <NuxtLink to="/x">Vacatures</NuxtLink>
-          </li>
-          <li>
-            <NuxtLink to="/x">Events</NuxtLink>
-          </li>
-          <li>
-            <NuxtLink to="/x">Contact</NuxtLink>
-          </li>
-        </ul>
-      </nav>
+    <div class="wrapper">
+      <div class="container">
+        <nav>
+          <ul>
+            <li v-for="{ name, link } in menuItems" :key="name">
+              <NuxtLink :to="link" @click.native="toggleMenu">{{
+                name
+              }}</NuxtLink>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import menuItems from '@/data/menu-items.json'
+
 export default {
   name: 'NavMenu',
+
+  props: {
+    isMenuActive: Boolean,
+  },
+
+  data() {
+    return {
+      menuItems,
+    }
+  },
+
+  methods: {
+    toggleMenu() {
+      this.$emit('toggleMenu')
+    },
+  },
 }
 </script>
 
@@ -47,20 +45,24 @@ export default {
   overflow-y: auto;
   padding-top: 6em;
   font-size: 1rem;
-  z-index: -1;
+  z-index: 999;
   opacity: 0;
-  position: absolute;
-  visibility: hidden;
-  height: 100vh;
+  position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
+  visibility: hidden;
+  height: 100vh;
+  width: 100%;
   background-color: $black;
-  transform: scale(1.05);
   transition: 200ms linear;
-  transition-property: transform, opacity, visibility;
+  transition-property: opacity, visibility;
   padding-bottom: 6em; // This is a friendly fix for touch devices/mobile browsers not being able to see the full text at the bottom of the nav if the menu was larger than the viewport.
+
+  .wrapper {
+    transform: scale(1.05);
+    transition-property: transform;
+    transition: 200ms linear;
+  }
 
   @include for-tablet-landscape-up {
     font-size: 2rem; // Double the font size, everything is set up with 'em' values to scale accordingly.
@@ -127,11 +129,14 @@ export default {
   }
 }
 
-.active {
+.menu-active {
   .nav__menu {
     opacity: 1;
     visibility: visible;
-    transform: scale(1);
+
+    .wrapper {
+      transform: scale(1);
+    }
   }
 }
 </style>
