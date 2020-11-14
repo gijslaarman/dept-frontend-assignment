@@ -17,8 +17,6 @@
 </template>
 
 <script>
-import menuItems from '@/data/menu-items.json'
-
 export default {
   name: 'NavMenu',
 
@@ -28,7 +26,7 @@ export default {
 
   data() {
     return {
-      menuItems,
+      menuItems: this.$store.state['menu-items'].list,
     }
   },
 

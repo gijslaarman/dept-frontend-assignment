@@ -67,7 +67,7 @@ export default {
   width: 100%;
   background-color: transparent;
   transition: 200ms;
-  transition-property: background-color;
+  transition-property: background-color, backdrop-filter;
   z-index: 1000;
 }
 
@@ -152,6 +152,8 @@ export default {
 // The page is being scrolled, add a background color to the header & make the logo smaller.
 .stick-to-top {
   background-color: rgba($white, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 
   .nav__logo {
     height: 14px;
@@ -169,6 +171,8 @@ export default {
 .menu-active {
   .nav {
     background-color: transparent;
+    -webkit-backdrop-filter: blur(0px);
+    backdrop-filter: blur(0px);
   }
 
   .nav__inner {

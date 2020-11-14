@@ -1,11 +1,11 @@
 <template>
   <div>
     <Header
+      :is-menu-active="isMenuActive"
       @toggleMenu="toggleMenu"
       @closeMenu="closeMenu"
-      :isMenuActive="isMenuActive"
     />
-    <NavMenu @toggleMenu="toggleMenu" :isMenuActive="isMenuActive" />
+    <NavMenu :is-menu-active="isMenuActive" @toggleMenu="toggleMenu" />
     <Nuxt />
   </div>
 </template>
