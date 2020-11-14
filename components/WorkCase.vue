@@ -1,5 +1,5 @@
 <template>
-  <article class="workcase">
+  <article ref="article" class="workcase" :class="{ animate: inView }">
     <a href="#">
       <div class="workcase__image">
         <img :src="`/img/cases/${workcase.img.src}`" :alt="workcase.img.alt" />
@@ -28,6 +28,33 @@ export default {
       }),
     },
   },
+
+  data() {
+    return {
+      inView: false,
+      elementPosition: null,
+    }
+  },
+
+  mounted() {
+    window.addEventListener('scroll', this.isElementInView)
+
+    // Set the element position here, so that the scroll event doesn't need to check everytime.
+    this.elementPosition =
+      this.$refs.article.getBoundingClientRect().top + scrollY
+  },
+
+  methods: {
+    isElementInView() {
+      const scrollY = window.scrollY || window.pageYOffset
+      const scrollPosition = scrollY + window.innerHeight
+
+      if (scrollPosition > this.elementPosition) {
+        // set view true, and make it not toggleable once the element is in view it should stay in view.
+        this.inView = true
+      }
+    },
+  },
 }
 </script>
 
@@ -37,7 +64,15 @@ export default {
   max-width: 585px;
   justify-self: center;
   display: block;
-  transition: transform 200ms;
+  position: relative;
+  bottom: 0;
+  transition: bottom 200ms;
+  transform: translateY(100px);
+  opacity: 0;
+
+  &.animate {
+    animation: workcasefadein 500ms forwards;
+  }
 }
 
 .workcase__image {
@@ -90,7 +125,7 @@ export default {
 }
 
 .workcase:hover {
-  transform: translateY(-5px);
+  bottom: 5px;
 
   .workcase__image {
     box-shadow: 0 2px 14px 1px rgba(0, 0, 0, 0.2),
@@ -113,6 +148,13 @@ export default {
 
   .workcase__link {
     display: block;
+  }
+}
+
+@keyframes workcasefadein {
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
   }
 }
 </style>

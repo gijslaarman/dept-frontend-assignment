@@ -29,7 +29,7 @@ export default {
 
 <style lang="scss">
 .work {
-  margin-bottom: 4.375rem;
+  padding-bottom: 4.375rem;
 }
 
 .work__filter {
@@ -46,6 +46,10 @@ export default {
 @include for-tablet-landscape-up {
   .work {
     margin-bottom: 6.25rem;
+
+    .workcase:nth-of-type(even) {
+      animation-delay: 100ms;
+    }
   }
   .work__grid {
     grid-template-columns: 1fr 1fr;
