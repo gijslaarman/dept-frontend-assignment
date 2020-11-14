@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Bol.com",
+    "title": "A summer island in the Netherlands",
+    "img": {
+      "src": "bolcom.png",
+      "alt": "A blue waterslide"
+    }
+  },
+  {
+    "name": "Kempen",
+    "title": "Not some average banking website",
+    "img": {
+      "src": "kempen.png",
+      "alt": "Someone pointing at a piece of paper, with a laptop in the background"
+    }
+  },
+  {
+    "name": "Philips",
+    "title": "Beautiful design meets innovative technology",
+    "img": {
+      "src": "philips.png",
+      "alt": "Selection of philips lamp products"
+    }
+  },
+  {
+    "name": "Gemeentemuseum",
+    "title": "A 100 years of Mondriaan & De Stijl",
+    "img": {
+      "src": "gemeentemuseum.png",
+      "alt": "Woman looking at a very blocky painting"
+    }
+  },
+  {
+    "name": "Be Lightning",
+    "title": "Delivering clarity on a global scale",
+    "img": {
+      "src": "lightning.png",
+      "alt": "Lamppost outside"
+    }
+  },
+  {
+    "name": "TUI",
+    "title": "Swip to find your next holiday destination",
+    "img": {
+      "src": "tui.png",
+      "alt": "Illustration of a man looking at a map and scratching his head"
+    }
+  },
+  {
+    "name": "Chocomel",
+    "title": "A campagin for the limited edition letter packs",
+    "img": {
+      "src": "chocomel.png",
+      "alt": "A couple of chocomel cartons with a heart on them"
+    }
+  },
+  {
+    "name": "JBL",
+    "title": "Live like a champion with Jerome Boateng",
+    "img": {
+      "src": "jbl.png",
+      "alt": "Jerome Boateng listening to JBL headphones"
+    }
+  },
+  {
+    "name": "Zalando",
+    "title": "Innovative SEO and content strategy for Zalando",
+    "img": {
+      "src": "zalando.png",
+      "alt": "Two men drawing on a whiteboard"
+    }
+  },
+  {
+    "name": "Koninklijke Bibliotheek",
+    "title": "The search for the most influential book ever",
+    "img": {
+      "src": "koninklijke-bibliotheek.png",
+      "alt": "Books stacked on top of each other"
+    }
+  }
+]

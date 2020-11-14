@@ -1,17 +1,22 @@
 <template>
   <main>
     <PageHeader :img-src="imgSrc" />
+
+    <div class="container">
+      <Work />
+    </div>
   </main>
 </template>
 
 <script>
 import PageHeader from '@/components/PageHeader'
+import Work from '@/components/Work'
 
 export default {
-  components: { PageHeader },
+  components: { PageHeader, Work },
   data() {
     return {
-      imgSrc: '/img/Header-img.jpg',
+      imgSrc: '/img/default-header.jpg',
     }
   },
 }

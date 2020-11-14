@@ -8,7 +8,10 @@
 export default {
   name: 'Button',
   props: {
-    href: String,
+    href: {
+      type: String,
+      default: '',
+    },
   },
 }
 </script>
