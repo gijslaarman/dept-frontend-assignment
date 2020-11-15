@@ -76,6 +76,7 @@ export default {
       padding: 0;
 
       li {
+        font-size: inherit;
         padding: 0;
         margin: 0;
         list-style: none;
