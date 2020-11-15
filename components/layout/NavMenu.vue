@@ -26,7 +26,7 @@ export default {
 
   data() {
     return {
-      menuItems: this.$store.state['menu-items'].list,
+      menuItems: this.$store.state['menu-items'].header,
     }
   },
 

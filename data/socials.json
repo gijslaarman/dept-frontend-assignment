@@ -1,0 +1,32 @@
+[
+  {
+    "type": "Facebook",
+    "link": "https://www.facebook.com/DeptAgency/",
+    "active": true
+  },
+  {
+    "type": "Twitter",
+    "link": "https://twitter.com/deptagency",
+    "active": true
+  },
+  {
+    "type": "Instagram",
+    "link": "https://www.instagram.com/deptagency/",
+    "active": true
+  },
+  {
+    "type": "LinkedIn",
+    "link": "https://www.linkedin.com/deptagency/",
+    "active": false
+  },
+  {
+    "type": "Mail",
+    "link": "mailto:info@dept.agency",
+    "active": false
+  },
+  {
+    "type": "Youtube",
+    "link": "https://www.youtube.com/deptagency/",
+    "active": false
+  }
+]

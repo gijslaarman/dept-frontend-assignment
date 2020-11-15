@@ -6,16 +6,20 @@
       @closeMenu="closeMenu"
     />
     <NavMenu :is-menu-active="isMenuActive" @toggleMenu="toggleMenu" />
+
     <Nuxt />
+
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
 import Header from '@/components/layout/Header'
 import NavMenu from '@/components/layout/NavMenu'
+import Footer from '@/components/layout/Footer'
 
 export default {
-  components: { Header, NavMenu },
+  components: { Header, NavMenu, Footer },
   data() {
     return {
       isMenuActive: false,
@@ -47,7 +51,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 html {
   font-size: 16px;
   -ms-text-size-adjust: 100%;
@@ -62,6 +66,10 @@ html {
 *::after {
   box-sizing: border-box;
   margin: 0;
+}
+
+html {
+  background-color: $white;
 }
 
 body.menu-active {

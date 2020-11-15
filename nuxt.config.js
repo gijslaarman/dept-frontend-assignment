@@ -26,11 +26,13 @@ export default {
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
-  modules: ['@nuxtjs/style-resources'],
+  modules: ['@nuxtjs/style-resources', '@nuxtjs/svg-sprite'],
 
   // Add styleResources to be able to use scss in components
+  // Only use 'scss:' for adding variables & mixins, otherwise the styles will be duplicated.
   styleResources: {
-    scss: ['./assets/scss/*.scss'],
+    scss: ['./assets/scss/variables-mixins.scss'],
+    css: ['./assets/scss/main.scss'],
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)

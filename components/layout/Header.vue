@@ -3,7 +3,7 @@
     <div class="container">
       <div class="nav__inner">
         <NuxtLink to="/" @click.native="closeMenu">
-          <DeptLogo title="Dept Logo" class="nav__logo" />
+          <DeptLogo title="Dept Logo" class="nav__logo" :light="isMenuActive" />
         </NuxtLink>
 
         <div class="nav__menu-button-wrapper">

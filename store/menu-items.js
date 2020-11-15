@@ -1,5 +1,6 @@
 import menuItems from '@/data/menu-items.json'
 
 export const state = () => ({
-  list: menuItems,
+  header: menuItems,
+  footer: menuItems.filter((item) => item.footer),
 })

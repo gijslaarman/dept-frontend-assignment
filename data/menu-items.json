@@ -1,38 +1,47 @@
 [
   {
     "name": "Home",
-    "link": "/"
+    "link": "/",
+    "footer": false
   },
   {
     "name": "Werk",
-    "link": "/werk"
+    "link": "/werk",
+    "footer": true
   },
   {
     "name": "Over",
-    "link": "/over"
+    "link": "/over",
+    "footer": true
   },
   {
     "name": "Diensten",
-    "link": "/diensten"
+    "link": "/diensten",
+    "footer": true
   },
   {
     "name": "Partners",
-    "link": "/partners"
+    "link": "/partners",
+    "footer": false
   },
   {
     "name": "Stories",
-    "link": "/stories"
+    "link": "/stories",
+    "footer": true
   },
   {
     "name": "Vacatures",
-    "link": "/vacatures"
+    "link": "/vacatures",
+    "footer": true
   },
   {
     "name": "Events",
-    "link": "/events"
+    "link": "/events",
+    "footer": false
   },
   {
     "name": "Contact",
-    "link": "/contact"
+    "link": "/contact",
+    "footer": true
   }
 ]

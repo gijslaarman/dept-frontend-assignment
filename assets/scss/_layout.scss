@@ -18,3 +18,21 @@ img {
   width: 100%;
   height: auto;
 }
+
+nav {
+  * {
+    font-family: 'Teko';
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    margin: 0;
+    list-style: none;
+    font-size: inherit;
+    text-transform: uppercase;
+  }
+}
