@@ -48,6 +48,7 @@ export default {
       this.isMenuActive = false
     },
   },
+  scrollToTop: true,
 }
 </script>
 
