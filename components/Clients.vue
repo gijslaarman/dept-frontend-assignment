@@ -25,7 +25,7 @@ export default {
 <style lang="scss">
 .clients {
   background-color: $background-grey;
-  padding: 1.875rem 0 2.375rem;
+  padding: 2.5rem 0 2.375rem;
   position: relative;
 
   .text {
@@ -38,6 +38,8 @@ export default {
   }
 
   @include for-tablet-landscape-up {
+    padding: 5rem 0 6.25rem;
+
     // Adding a white bar to the right with a pseudo element to align the items still center of the page, not relative to the content because it would be aligned wrong with a border or margin to the right.
     &:after {
       content: '';

@@ -6,7 +6,7 @@
       </div>
       <h4 class="workcase__name">{{ workcase.name }}</h4>
       <h3 class="workcase__title">{{ workcase.title }}</h3>
-      <a href="#" class="workcase__link">view case</a>
+      <span class="workcase__link">view case</span>
     </a>
   </article>
 </template>
