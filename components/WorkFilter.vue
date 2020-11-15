@@ -1,6 +1,11 @@
 <template>
   <div class="filter">
-    <Dropdown :label="label" :options="options" />
+    <Dropdown
+      ref="select"
+      :label="label"
+      :options="categories"
+      @valueChange="valueChange"
+    />
   </div>
 </template>
 
@@ -10,23 +15,33 @@ import Dropdown from '@/components/ui/Dropdown'
 export default {
   components: { Dropdown },
 
+  props: {
+    label: {
+      type: String,
+      default: 'Dropdown',
+    },
+    categories: {
+      type: Array,
+      default: () => ['No options set'],
+    },
+  },
+
   data() {
-    // Get options
-    const categories = ['All work']
-
-    const options = categories.map((category) => {
-      // make value lowercase & remove all spaces
-      const value = category.toLowerCase().replace(' ', '')
-      return {
-        name: category,
-        value,
-      }
-    })
-
     return {
-      label: 'Show me',
-      options,
+      category: this.$props.categories[0],
     }
+  },
+
+  methods: {
+    valueChange(value) {
+      this.category = value
+      this.emitFilterChange()
+    },
+    emitFilterChange() {
+      this.$emit('filterChange', {
+        category: this.$data.category,
+      })
+    },
   },
 }
 </script>

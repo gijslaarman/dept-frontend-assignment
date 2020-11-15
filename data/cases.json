@@ -5,7 +5,8 @@
     "img": {
       "src": "bolcom.png",
       "alt": "A blue waterslide"
-    }
+    },
+    "category": "retail"
   },
   {
     "name": "Kempen",
@@ -13,7 +14,8 @@
     "img": {
       "src": "kempen.png",
       "alt": "Someone pointing at a piece of paper, with a laptop in the background"
-    }
+    },
+    "category": "finance"
   },
   {
     "name": "Philips",
@@ -21,7 +23,8 @@
     "img": {
       "src": "philips.png",
       "alt": "Selection of philips lamp products"
-    }
+    },
+    "category": "retail"
   },
   {
     "name": "Gemeentemuseum",
@@ -29,7 +32,8 @@
     "img": {
       "src": "gemeentemuseum.png",
       "alt": "Woman looking at a very blocky painting"
-    }
+    },
+    "category": "culture"
   },
   {
     "name": "Be Lightning",
@@ -37,7 +41,8 @@
     "img": {
       "src": "lightning.png",
       "alt": "Lamppost outside"
-    }
+    },
+    "category": "finance"
   },
   {
     "name": "TUI",
@@ -45,7 +50,8 @@
     "img": {
       "src": "tui.png",
       "alt": "Illustration of a man looking at a map and scratching his head"
-    }
+    },
+    "category": "travelling"
   },
   {
     "name": "Chocomel",
@@ -53,7 +59,8 @@
     "img": {
       "src": "chocomel.png",
       "alt": "A couple of chocomel cartons with a heart on them"
-    }
+    },
+    "category": "retail"
   },
   {
     "name": "JBL",
@@ -61,7 +68,8 @@
     "img": {
       "src": "jbl.png",
       "alt": "Jerome Boateng listening to JBL headphones"
-    }
+    },
+    "category": "retail"
   },
   {
     "name": "Zalando",
@@ -69,7 +77,8 @@
     "img": {
       "src": "zalando.png",
       "alt": "Two men drawing on a whiteboard"
-    }
+    },
+    "category": "strategy"
   },
   {
     "name": "Koninklijke Bibliotheek",
@@ -77,6 +86,7 @@
     "img": {
       "src": "koninklijke-bibliotheek.png",
       "alt": "Books stacked on top of each other"
-    }
+    },
+    "category": "culture"
   }
 ]

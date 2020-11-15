@@ -1,7 +1,12 @@
 <template>
   <section class="work">
     <div class="container">
-      <WorkFilter class="work__filter" />
+      <WorkFilter
+        class="work__filter"
+        label="Show me"
+        :categories="categories"
+        @filterChange="filterCases"
+      />
 
       <div class="work__grid">
         <WorkCase
@@ -21,9 +26,26 @@ import WorkFilter from '@/components/WorkFilter'
 export default {
   components: { WorkCase, WorkFilter },
 
+  data() {
+    const thisCases = this.$store.state.cases.cases
+    const allItemCategories = thisCases.map((item) => item.category)
+    // Create a new unique set of categories (remove duplicates) & have the first item be all
+    const categories = ['all work', ...new Set(allItemCategories)]
+
+    return {
+      categories,
+    }
+  },
+
   computed: {
     cases() {
-      return this.$store.state.cases.list
+      return this.$store.state.cases.cases
+    },
+  },
+
+  methods: {
+    filterCases(data) {
+      this.$store.commit('cases/filterCases', data)
     },
   },
 }
