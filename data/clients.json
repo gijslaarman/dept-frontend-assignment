@@ -1,0 +1,114 @@
+[
+  {
+    "name": "Nivea",
+    "img": {
+      "src": "/img/clients/client_nivea.png",
+      "alt": "Nivea"
+    }
+  },
+  {
+    "name": "Mona",
+    "img": {
+      "src": "/img/clients/client_mona.png",
+      "alt": "Mona"
+    }
+  },
+  {
+    "name": "Transavia",
+    "img": {
+      "src": "/img/clients/client_transavia.png",
+      "alt": "Transavia"
+    }
+  },
+  {
+    "name": "Zalando",
+    "img": {
+      "src": "/img/clients/client_zalando.png",
+      "alt": "Zalando"
+    }
+  },
+  {
+    "name": "TomTom",
+    "img": {
+      "src": "/img/clients/client_tomtom.png",
+      "alt": "TomTom"
+    }
+  },
+  {
+    "name": "Unilever",
+    "img": {
+      "src": "/img/clients/client_unilever.png",
+      "alt": "Unilever"
+    }
+  },
+  {
+    "name": "Adidas",
+    "img": {
+      "src": "/img/clients/client_adidas.png",
+      "alt": "Adidas"
+    }
+  },
+  {
+    "name": "Pathé",
+    "img": {
+      "src": "/img/clients/client_pathe.png",
+      "alt": "Pathé"
+    }
+  },
+  {
+    "name": "ABN-AMRO",
+    "img": {
+      "src": "/img/clients/client_abnamro.png",
+      "alt": "ABN-AMRO bank"
+    }
+  },
+  {
+    "name": "Triumph",
+    "img": {
+      "src": "/img/clients/client_triumph.png",
+      "alt": "Triumph"
+    }
+  },
+  {
+    "name": "Microsoft",
+    "img": {
+      "src": "/img/clients/client_microsoft.png",
+      "alt": "Microsoft"
+    }
+  },
+  {
+    "name": "Oxxio",
+    "img": {
+      "src": "/img/clients/client_oxxio.png",
+      "alt": "Oxxio"
+    }
+  },
+  {
+    "name": "Nationale Nederlanden",
+    "img": {
+      "src": "/img/clients/client_nationalenederlanden.png",
+      "alt": "Nationale Nederlanden"
+    }
+  },
+  {
+    "name": "Ziggo",
+    "img": {
+      "src": "/img/clients/client_ziggo.png",
+      "alt": "Ziggo"
+    }
+  },
+  {
+    "name": "Walibi",
+    "img": {
+      "src": "/img/clients/client_walibi.png",
+      "alt": "Walibi"
+    }
+  },
+  {
+    "name": "KLM",
+    "img": {
+      "src": "/img/clients/client_klm.png",
+      "alt": "KLM"
+    }
+  }
+]

@@ -1,13 +1,15 @@
 <template>
   <section class="work">
-    <WorkFilter class="work__filter" />
+    <div class="container">
+      <WorkFilter class="work__filter" />
 
-    <div class="work__grid">
-      <WorkCase
-        v-for="workcase in cases"
-        :key="workcase.name"
-        :workcase="workcase"
-      />
+      <div class="work__grid">
+        <WorkCase
+          v-for="workcase in cases"
+          :key="workcase.name"
+          :workcase="workcase"
+        />
+      </div>
     </div>
   </section>
 </template>

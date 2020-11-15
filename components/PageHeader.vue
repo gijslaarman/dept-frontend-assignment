@@ -1,5 +1,8 @@
 <template>
-  <div class="page-header" :style="{ 'background-image': `url(${imgSrc})` }">
+  <section
+    class="page-header"
+    :style="{ 'background-image': `url(${imgSrc})` }"
+  >
     <div class="container">
       <h1 class="page-header__title">Work</h1>
 
@@ -7,7 +10,7 @@
         <Button class="page-header__button" href="/something">View case</Button>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -42,7 +45,6 @@ export default {
   font-size: 170px;
   line-height: 1em;
   height: unset;
-  text-transform: uppercase;
   padding: 130px 0 70px;
 }
 
