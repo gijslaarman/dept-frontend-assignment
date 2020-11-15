@@ -4,6 +4,10 @@ body {
   width: 100%;
 }
 
+body {
+  min-width: 320px;
+}
+
 .container {
   padding: 0 1.25rem;
   max-width: 1240px;
