@@ -7,7 +7,7 @@
 ## Build With
 
 - [Vue](https://v3.vuejs.org/guide/introduction.html), used for a component based setup. And the ability to manage states (scroll position, is item in view) easily.
-- [Nuxt](https://nuxtjs.org/), for SSR. Overkill for what it is right now, but makes the page a Single Page Application and can add transitions between pages (notice how the menu fades away when you click a link inside of it).
+- [Nuxt](https://nuxtjs.org/), for SSR. Overkill for what it is right now, but makes the page a Single Page Application (without having to use a hash router) and can add transitions between pages (notice how the menu fades away when you click a link inside of it).
 - [SCSS]('https://sass-lang.com/guide') for creating variables inside CSS & breakpoints mixins.
 
 ## Installation & Build Setup
