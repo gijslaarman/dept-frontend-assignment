@@ -2,6 +2,9 @@
   "name": "dept-frontend-assignment",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": ">=10.13"
+  },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",

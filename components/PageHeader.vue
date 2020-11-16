@@ -44,6 +44,7 @@ export default {
   font-weight: 400;
   font-size: 170px;
   line-height: 1em;
+  margin: 0;
   height: unset;
   padding: 130px 0 70px;
 }
