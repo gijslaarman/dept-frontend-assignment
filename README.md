@@ -2,7 +2,7 @@
 
 ![Preview of the assignment](./docs/preview.png)
 
-<p style="text-align: center"><a href="dept-frontend-assignment-chi.vercel.app/">Click here for the working demo</a></p>
+<p style="text-align: center"><a href="https://dept-frontend-assignment-chi.vercel.app/">Click here for the working demo</a></p>
 
 ## Build With
 
